@@ -1,7 +1,7 @@
 body {
   font-family: Arial;
   margin: 0px;
-  background: #121212;
+  background: #1c1c1c;
   display: grid;
   gap: 60px;
   justify-items: center;
@@ -95,6 +95,12 @@ p {
   right: -30px;
 }
 
+/**Ajustando imagem para ficar do mesmo tamanho do conteúdo**/
+.introducao-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .botao {
   background: #746be6;
   color: #fff;
@@ -120,6 +126,7 @@ p {
   background: #000;
   padding: 40px;
   color: #ccc;
+  margin-top: 0px;
 }
 
 .vantagens h3 {
@@ -136,7 +143,7 @@ p {
 }
 
 .vantagens-item:nth-child(odd) {
-  background: #121212;
+  background: #1c1c1c;
 }
 
 .vantagens-item:hover {
@@ -154,4 +161,56 @@ p {
   padding: 40px;
   box-sizing: border-box;
   color: #fff;
+}
+
+/**Verificar qual ponto de quebra no INSPECIONAR ELEMENTO
+Deixando o nome vantagens em uma única coluna e depois botando no centro**/
+@media (max-width: 1000px) {
+  .conteudo-vantagem {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .header {
+    gap: 30px;
+  }
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .introducao {
+    text-align: left;
+    justify-items: start;
+  }
+
+  /** Removendo elemento porque estava estourando**/
+  .introducao::before {
+    display: none;
+  }
+
+  .subtitulo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+  .vantagens-item {
+    padding: 15px;
+  }
 }
