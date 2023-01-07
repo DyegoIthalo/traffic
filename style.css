@@ -172,6 +172,15 @@ Deixando o nome vantagens em uma única coluna e depois botando no centro**/
   .subtitulo {
     text-align: center;
   }
+  .introducao h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 815px) {
+  .introducao h1 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 600px) {
