@@ -177,9 +177,12 @@ Deixando o nome vantagens em uma única coluna e depois botando no centro**/
   }
 }
 
-@media (max-width: 815px) {
+@media (max-width: 830px) {
   .introducao h1 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+  .introducao p {
+    font-size: 1.2rem;
   }
 }
 
