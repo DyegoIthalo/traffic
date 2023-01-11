@@ -1,7 +1,31 @@
+:root {
+  --cor-primaria: #746be6;
+  --cor-gradient: linear-gradient(#6041de, #4e2fc9);
+  --fundo-1: #1c1c1c;
+  --fundo-2: #000;
+  --texto-1: #fff;
+  --texto-2: #ccc;
+  --subtitulo: rgba(255, 255, 255, 0.2);
+  --onda-escura: url(/img/onda-escura.svg);
+}
+
+@media (prefrs-color-scheme: light) {
+  :root {
+    --cor-primaria: #746be6;
+    --cor-gradient: linear-gradient(#6041de, #4e2fc9);
+    --fundo-1: #f7f7f7;
+    --fundo-2: #fff;
+    --texto-1: #000;
+    --texto-2: #1c1c1c;
+    --subtitulo: rgba(88, 88, 88, 0.2);
+    --onda-clara: url(/img/onda-clara.svg);
+  }
+}
+
 body {
   font-family: Arial;
   margin: 0px;
-  background: #1c1c1c;
+  background: var(--fundo-1);
   display: grid;
   gap: 60px;
   justify-items: center;
@@ -50,16 +74,16 @@ p {
 
 .menu a {
   display: block;
-  background: #000;
+  background: var(--fundo-2);
   padding: 1rem 2rem;
   border-radius: 4px;
-  color: #fff;
+  color: var(--texto-1);
   text-transform: uppercase;
   border: 2px solid transparent;
 }
 
 .menu a:hover {
-  border-color: #746be6;
+  border-color: var(--cor-primaria);
 }
 
 .conteudo {
@@ -70,11 +94,11 @@ p {
 
 .introducao h1 {
   font-size: 2rem;
-  color: #fff;
+  color: var(--texto-1);
 }
 
 .introducao {
-  background: #000;
+  background: var(--fundo-2);
   padding: 40px;
   text-align: right;
   position: relative;
@@ -82,14 +106,14 @@ p {
   gap: 20px;
   align-content: center;
   justify-items: end;
-  color: #ccc;
+  color: var(--texto-2);
 }
 
 .introducao::before {
   content: "";
   width: 60px;
   height: 4px;
-  background: #746be6;
+  background: var(--cor-primaria);
   position: absolute;
   top: 30px;
   right: -30px;
@@ -102,7 +126,7 @@ p {
 }
 
 .botao {
-  background: #746be6;
+  background: var(--cor-primaria);
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 4px;
@@ -110,28 +134,29 @@ p {
 }
 
 .botao:hover {
-  background: linear-gradient(#6041de, #6041de);
+  background: var(--cor-gradient);
 }
 
 .subtitulo {
   font-size: 4rem;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--subtitulo);
   text-align: right;
   padding: 40px;
   align-self: center;
+  background-image: var(--onda);
 }
 
 .vantagens {
-  background: #000;
+  background: var(--fundo-2);
   padding: 40px;
-  color: #ccc;
+  color: var(--texto-2);
   margin-top: 0px;
 }
 
 .vantagens h3 {
   font-size: 1.3rem;
-  color: #fff;
+  color: var(--texto-1);
 }
 
 .vantagens-item {
@@ -143,11 +168,11 @@ p {
 }
 
 .vantagens-item:nth-child(odd) {
-  background: #1c1c1c;
+  background: var(--fundo-1);
 }
 
 .vantagens-item:hover {
-  border-color: #746fe4;
+  border-color: var(--cor-primaria);
 }
 
 .vantagens-item p {
@@ -155,12 +180,12 @@ p {
 }
 
 .rodape {
-  background: #000;
+  background: var(--fundo-2);
   width: 100%;
   text-align: center;
   padding: 40px;
   box-sizing: border-box;
-  color: #fff;
+  color: var(--texto-1);
 }
 
 /**Verificar qual ponto de quebra no INSPECIONAR ELEMENTO
