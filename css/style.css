@@ -200,6 +200,10 @@ Deixando o nome vantagens em uma única coluna e depois botando no centro**/
   .introducao h1 {
     font-size: 1.8rem;
   }
+  .introducao-cover img {
+    height: 300px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 830px) {
